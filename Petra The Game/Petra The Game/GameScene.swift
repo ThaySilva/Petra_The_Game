@@ -18,6 +18,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     
     let ground = SKNode()
     let groundTexture = SKTexture(imageNamed: "ground")
+    let skylineTexture = SKTexture(imageNamed: "skyline")
     
     override func didMove(to view: SKView) {
         
@@ -31,6 +32,8 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         self.addChild(movingNode)
         
         createGround()
+        
+        createSkyline()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -40,7 +43,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     func createGround() {
         groundTexture.filteringMode = .nearest
         
-        let moveGround = SKAction.moveBy(x: -groundTexture.size().width * 3.0, y: 0,
+        let moveGround = SKAction.moveBy(x: -groundTexture.size().width * 3.5, y: 0,
                                        duration: TimeInterval(0.006 * groundTexture.size().width * 3.0))
         let resetGround = SKAction.moveBy(x: groundTexture.size().width * 3.0, y: 0, duration: 0.00)
         let moveGroundForever = SKAction.repeatForever(SKAction.sequence([moveGround, resetGround]))
@@ -61,5 +64,25 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         ground.physicsBody?.isDynamic = false
         ground.physicsBody?.categoryBitMask = worldCategory
         self.addChild(ground)
+    }
+    
+    func createSkyline() {
+        skylineTexture.filteringMode = .nearest
+        
+        let moveSkyline = SKAction.moveBy(x: -skylineTexture.size().width * 3.0, y: 0,
+                                          duration: TimeInterval(0.05 * skylineTexture.size().width * 3.0))
+        let resetSkyline = SKAction.moveBy(x: skylineTexture.size().width * 3.0, y: 0, duration: 0.00)
+        let moveSkylineForever = SKAction.repeatForever(SKAction.sequence([moveSkyline, resetSkyline]))
+        
+        for i in 0...3 + Int(self.frame.size.width / (skylineTexture.size().width * 3)) {
+            let i = CGFloat(i)
+            let skylineSprite = SKSpriteNode(texture: skylineTexture)
+            skylineSprite.setScale(3.0)
+            skylineSprite.zPosition = -20
+            skylineSprite.position = CGPoint(x: i * skylineSprite.size.width,
+                                             y: -(self.frame.size.height / 2.5) + groundTexture.size().height * 3.15)
+            skylineSprite.run(moveSkylineForever)
+            movingNode.addChild(skylineSprite)
+        }
     }
 }
