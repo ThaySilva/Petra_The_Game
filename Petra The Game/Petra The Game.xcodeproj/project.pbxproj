@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE71E9002045E53900E3D7D3 /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DE71E8FF2045E53900E3D7D3 /* Player.atlas */; };
 		DE8A9B1D202CC4C600697B34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A9B1C202CC4C600697B34 /* AppDelegate.swift */; };
 		DE8A9B1F202CC4C600697B34 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B1E202CC4C600697B34 /* GameScene.sks */; };
 		DE8A9B21202CC4C600697B34 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B20202CC4C600697B34 /* Actions.sks */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE71E8FF2045E53900E3D7D3 /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 		DE8A9B19202CC4C600697B34 /* Petra The Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petra The Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8A9B1C202CC4C600697B34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE8A9B1E202CC4C600697B34 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				DE8A9B24202CC4C600697B34 /* GameViewController.swift */,
 				DE8A9B26202CC4C600697B34 /* Main.storyboard */,
 				DE8A9B29202CC4C600697B34 /* Assets.xcassets */,
+				DE71E8FF2045E53900E3D7D3 /* Player.atlas */,
 				DE8A9B2B202CC4C600697B34 /* LaunchScreen.storyboard */,
 				DE8A9B2E202CC4C600697B34 /* Info.plist */,
 			);
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE71E9002045E53900E3D7D3 /* Player.atlas in Resources */,
 				DE8A9B28202CC4C600697B34 /* Main.storyboard in Resources */,
 				DE8A9B1F202CC4C600697B34 /* GameScene.sks in Resources */,
 				DE8A9B2A202CC4C600697B34 /* Assets.xcassets in Resources */,
