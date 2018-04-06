@@ -3,76 +3,75 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE71E9002045E53900E3D7D3 /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DE71E8FF2045E53900E3D7D3 /* Player.atlas */; };
-		DE8A9B1D202CC4C600697B34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A9B1C202CC4C600697B34 /* AppDelegate.swift */; };
-		DE8A9B1F202CC4C600697B34 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B1E202CC4C600697B34 /* GameScene.sks */; };
-		DE8A9B21202CC4C600697B34 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B20202CC4C600697B34 /* Actions.sks */; };
-		DE8A9B23202CC4C600697B34 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A9B22202CC4C600697B34 /* GameScene.swift */; };
-		DE8A9B25202CC4C600697B34 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A9B24202CC4C600697B34 /* GameViewController.swift */; };
-		DE8A9B28202CC4C600697B34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B26202CC4C600697B34 /* Main.storyboard */; };
-		DE8A9B2A202CC4C600697B34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B29202CC4C600697B34 /* Assets.xcassets */; };
-		DE8A9B2D202CC4C600697B34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8A9B2B202CC4C600697B34 /* LaunchScreen.storyboard */; };
-		DE8A9B38202CC4C600697B34 /* Petra_The_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A9B37202CC4C600697B34 /* Petra_The_GameTests.swift */; };
-		DE8A9B43202CC4C600697B34 /* Petra_The_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A9B42202CC4C600697B34 /* Petra_The_GameUITests.swift */; };
+		DE6FDD762076246400BB664B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FDD752076246400BB664B /* AppDelegate.swift */; };
+		DE6FDD7A2076246400BB664B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD792076246400BB664B /* Actions.sks */; };
+		DE6FDD7E2076246400BB664B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FDD7D2076246400BB664B /* GameViewController.swift */; };
+		DE6FDD812076246400BB664B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD7F2076246400BB664B /* Main.storyboard */; };
+		DE6FDD832076246500BB664B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD822076246500BB664B /* Assets.xcassets */; };
+		DE6FDD862076246500BB664B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD842076246500BB664B /* LaunchScreen.storyboard */; };
+		DE6FDD93207624B500BB664B /* Petra_3.png in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD90207624B500BB664B /* Petra_3.png */; };
+		DE6FDD94207624B500BB664B /* Petra_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD91207624B500BB664B /* Petra_1.png */; };
+		DE6FDD95207624B500BB664B /* Petra_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD92207624B500BB664B /* Petra_2.png */; };
+		DE6FDD97207624E900BB664B /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD96207624E900BB664B /* MainMenu.sks */; };
+		DE6FDD99207624F700BB664B /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FDD98207624F700BB664B /* MainMenuScene.swift */; };
+		DED8BBE2207674A70036635B /* Information.sks in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBE1207674A70036635B /* Information.sks */; };
+		DED8BBE4207674BA0036635B /* InformationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8BBE3207674BA0036635B /* InformationScene.swift */; };
+		DED8BBE6207677AE0036635B /* Customiser.sks in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBE5207677AE0036635B /* Customiser.sks */; };
+		DED8BBE8207677BC0036635B /* CustomiserScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8BBE7207677BC0036635B /* CustomiserScene.swift */; };
+		DED8BBEA207678530036635B /* Gameplay.sks in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBE9207678530036635B /* Gameplay.sks */; };
+		DED8BBEC207678610036635B /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8BBEB207678610036635B /* GameplayScene.swift */; };
+		DED8BBEE2077E3120036635B /* Petra_1_red.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBED2077E3120036635B /* Petra_1_red.png */; };
+		DED8BBF02077E60F0036635B /* Petra_1_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBEF2077E60F0036635B /* Petra_1_yellow.png */; };
+		DED8BBF22077E74E0036635B /* Petra_1_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBF12077E74E0036635B /* Petra_1_purple.png */; };
+		DED8BBF42077F35A0036635B /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBF32077F35A0036635B /* GameOver.sks */; };
+		DED8BBF62077F3750036635B /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8BBF52077F3750036635B /* GameOverScene.swift */; };
+		DED8BBF92078157B0036635B /* Petra_2_red.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBF72078157B0036635B /* Petra_2_red.png */; };
+		DED8BBFA2078157B0036635B /* Petra_3_red.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBF82078157B0036635B /* Petra_3_red.png */; };
+		DED8BBFD207818E10036635B /* Petra_3_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBFB207818E10036635B /* Petra_3_yellow.png */; };
+		DED8BBFE207818E10036635B /* Petra_2_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBFC207818E10036635B /* Petra_2_yellow.png */; };
+		DED8BC0120781BAD0036635B /* Petra_3_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBFF20781BAD0036635B /* Petra_3_purple.png */; };
+		DED8BC0220781BAD0036635B /* Petra_2_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BC0020781BAD0036635B /* Petra_2_purple.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DE8A9B34202CC4C600697B34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE8A9B11202CC4C600697B34 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE8A9B18202CC4C600697B34;
-			remoteInfo = "Petra The Game";
-		};
-		DE8A9B3F202CC4C600697B34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE8A9B11202CC4C600697B34 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE8A9B18202CC4C600697B34;
-			remoteInfo = "Petra The Game";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		DE71E8FF2045E53900E3D7D3 /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
-		DE8A9B19202CC4C600697B34 /* Petra The Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petra The Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE8A9B1C202CC4C600697B34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE8A9B1E202CC4C600697B34 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		DE8A9B20202CC4C600697B34 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		DE8A9B22202CC4C600697B34 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		DE8A9B24202CC4C600697B34 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		DE8A9B27202CC4C600697B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DE8A9B29202CC4C600697B34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE8A9B2C202CC4C600697B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE8A9B2E202CC4C600697B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE8A9B33202CC4C600697B34 /* Petra The GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Petra The GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE8A9B37202CC4C600697B34 /* Petra_The_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petra_The_GameTests.swift; sourceTree = "<group>"; };
-		DE8A9B39202CC4C600697B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE8A9B3E202CC4C600697B34 /* Petra The GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Petra The GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE8A9B42202CC4C600697B34 /* Petra_The_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petra_The_GameUITests.swift; sourceTree = "<group>"; };
-		DE8A9B44202CC4C600697B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6FDD722076246400BB664B /* Petra The Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petra The Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6FDD752076246400BB664B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE6FDD792076246400BB664B /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		DE6FDD7D2076246400BB664B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DE6FDD802076246400BB664B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE6FDD822076246500BB664B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE6FDD852076246500BB664B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE6FDD872076246500BB664B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6FDD90207624B500BB664B /* Petra_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_3.png; sourceTree = "<group>"; };
+		DE6FDD91207624B500BB664B /* Petra_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_1.png; sourceTree = "<group>"; };
+		DE6FDD92207624B500BB664B /* Petra_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_2.png; sourceTree = "<group>"; };
+		DE6FDD96207624E900BB664B /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		DE6FDD98207624F700BB664B /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		DED8BBE1207674A70036635B /* Information.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Information.sks; sourceTree = "<group>"; };
+		DED8BBE3207674BA0036635B /* InformationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScene.swift; sourceTree = "<group>"; };
+		DED8BBE5207677AE0036635B /* Customiser.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Customiser.sks; sourceTree = "<group>"; };
+		DED8BBE7207677BC0036635B /* CustomiserScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomiserScene.swift; sourceTree = "<group>"; };
+		DED8BBE9207678530036635B /* Gameplay.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Gameplay.sks; sourceTree = "<group>"; };
+		DED8BBEB207678610036635B /* GameplayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
+		DED8BBED2077E3120036635B /* Petra_1_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_1_red.png; sourceTree = "<group>"; };
+		DED8BBEF2077E60F0036635B /* Petra_1_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_1_yellow.png; sourceTree = "<group>"; };
+		DED8BBF12077E74E0036635B /* Petra_1_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_1_purple.png; sourceTree = "<group>"; };
+		DED8BBF32077F35A0036635B /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
+		DED8BBF52077F3750036635B /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		DED8BBF72078157B0036635B /* Petra_2_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_2_red.png; sourceTree = "<group>"; };
+		DED8BBF82078157B0036635B /* Petra_3_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_3_red.png; sourceTree = "<group>"; };
+		DED8BBFB207818E10036635B /* Petra_3_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_3_yellow.png; sourceTree = "<group>"; };
+		DED8BBFC207818E10036635B /* Petra_2_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_2_yellow.png; sourceTree = "<group>"; };
+		DED8BBFF20781BAD0036635B /* Petra_3_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_3_purple.png; sourceTree = "<group>"; };
+		DED8BC0020781BAD0036635B /* Petra_2_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_2_purple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DE8A9B16202CC4C600697B34 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8A9B30202CC4C600697B34 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8A9B3B202CC4C600697B34 /* Frameworks */ = {
+		DE6FDD6F2076246400BB664B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,71 +81,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE8A9B10202CC4C600697B34 = {
+		DE6FDD692076246400BB664B = {
 			isa = PBXGroup;
 			children = (
-				DE8A9B1B202CC4C600697B34 /* Petra The Game */,
-				DE8A9B36202CC4C600697B34 /* Petra The GameTests */,
-				DE8A9B41202CC4C600697B34 /* Petra The GameUITests */,
-				DE8A9B1A202CC4C600697B34 /* Products */,
+				DE6FDD742076246400BB664B /* Petra The Game */,
+				DE6FDD732076246400BB664B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DE8A9B1A202CC4C600697B34 /* Products */ = {
+		DE6FDD732076246400BB664B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE8A9B19202CC4C600697B34 /* Petra The Game.app */,
-				DE8A9B33202CC4C600697B34 /* Petra The GameTests.xctest */,
-				DE8A9B3E202CC4C600697B34 /* Petra The GameUITests.xctest */,
+				DE6FDD722076246400BB664B /* Petra The Game.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE8A9B1B202CC4C600697B34 /* Petra The Game */ = {
+		DE6FDD742076246400BB664B /* Petra The Game */ = {
 			isa = PBXGroup;
 			children = (
-				DE8A9B1C202CC4C600697B34 /* AppDelegate.swift */,
-				DE8A9B1E202CC4C600697B34 /* GameScene.sks */,
-				DE8A9B20202CC4C600697B34 /* Actions.sks */,
-				DE8A9B22202CC4C600697B34 /* GameScene.swift */,
-				DE8A9B24202CC4C600697B34 /* GameViewController.swift */,
-				DE8A9B26202CC4C600697B34 /* Main.storyboard */,
-				DE8A9B29202CC4C600697B34 /* Assets.xcassets */,
-				DE71E8FF2045E53900E3D7D3 /* Player.atlas */,
-				DE8A9B2B202CC4C600697B34 /* LaunchScreen.storyboard */,
-				DE8A9B2E202CC4C600697B34 /* Info.plist */,
+				DE6FDD8F207624A300BB664B /* Player.atlas */,
+				DE6FDD8E2076249900BB664B /* Scene Classes */,
+				DE6FDD8D2076249100BB664B /* Scenes */,
+				DE6FDD752076246400BB664B /* AppDelegate.swift */,
+				DE6FDD792076246400BB664B /* Actions.sks */,
+				DE6FDD7D2076246400BB664B /* GameViewController.swift */,
+				DE6FDD7F2076246400BB664B /* Main.storyboard */,
+				DE6FDD822076246500BB664B /* Assets.xcassets */,
+				DE6FDD842076246500BB664B /* LaunchScreen.storyboard */,
+				DE6FDD872076246500BB664B /* Info.plist */,
 			);
 			path = "Petra The Game";
 			sourceTree = "<group>";
 		};
-		DE8A9B36202CC4C600697B34 /* Petra The GameTests */ = {
+		DE6FDD8D2076249100BB664B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				DE8A9B37202CC4C600697B34 /* Petra_The_GameTests.swift */,
-				DE8A9B39202CC4C600697B34 /* Info.plist */,
+				DE6FDD96207624E900BB664B /* MainMenu.sks */,
+				DED8BBE1207674A70036635B /* Information.sks */,
+				DED8BBE5207677AE0036635B /* Customiser.sks */,
+				DED8BBE9207678530036635B /* Gameplay.sks */,
+				DED8BBF32077F35A0036635B /* GameOver.sks */,
 			);
-			path = "Petra The GameTests";
+			path = Scenes;
 			sourceTree = "<group>";
 		};
-		DE8A9B41202CC4C600697B34 /* Petra The GameUITests */ = {
+		DE6FDD8E2076249900BB664B /* Scene Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DE8A9B42202CC4C600697B34 /* Petra_The_GameUITests.swift */,
-				DE8A9B44202CC4C600697B34 /* Info.plist */,
+				DE6FDD98207624F700BB664B /* MainMenuScene.swift */,
+				DED8BBE3207674BA0036635B /* InformationScene.swift */,
+				DED8BBE7207677BC0036635B /* CustomiserScene.swift */,
+				DED8BBEB207678610036635B /* GameplayScene.swift */,
+				DED8BBF52077F3750036635B /* GameOverScene.swift */,
 			);
-			path = "Petra The GameUITests";
+			path = "Scene Classes";
+			sourceTree = "<group>";
+		};
+		DE6FDD8F207624A300BB664B /* Player.atlas */ = {
+			isa = PBXGroup;
+			children = (
+				DED8BBED2077E3120036635B /* Petra_1_red.png */,
+				DED8BBEF2077E60F0036635B /* Petra_1_yellow.png */,
+				DE6FDD91207624B500BB664B /* Petra_1.png */,
+				DE6FDD92207624B500BB664B /* Petra_2.png */,
+				DED8BBF12077E74E0036635B /* Petra_1_purple.png */,
+				DED8BBF72078157B0036635B /* Petra_2_red.png */,
+				DED8BBF82078157B0036635B /* Petra_3_red.png */,
+				DED8BBFC207818E10036635B /* Petra_2_yellow.png */,
+				DED8BBFB207818E10036635B /* Petra_3_yellow.png */,
+				DED8BC0020781BAD0036635B /* Petra_2_purple.png */,
+				DED8BBFF20781BAD0036635B /* Petra_3_purple.png */,
+				DE6FDD90207624B500BB664B /* Petra_3.png */,
+			);
+			path = Player.atlas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE8A9B18202CC4C600697B34 /* Petra The Game */ = {
+		DE6FDD712076246400BB664B /* Petra The Game */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE8A9B47202CC4C600697B34 /* Build configuration list for PBXNativeTarget "Petra The Game" */;
+			buildConfigurationList = DE6FDD8A2076246500BB664B /* Build configuration list for PBXNativeTarget "Petra The Game" */;
 			buildPhases = (
-				DE8A9B15202CC4C600697B34 /* Sources */,
-				DE8A9B16202CC4C600697B34 /* Frameworks */,
-				DE8A9B17202CC4C600697B34 /* Resources */,
+				DE6FDD6E2076246400BB664B /* Sources */,
+				DE6FDD6F2076246400BB664B /* Frameworks */,
+				DE6FDD702076246400BB664B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -154,176 +174,103 @@
 			);
 			name = "Petra The Game";
 			productName = "Petra The Game";
-			productReference = DE8A9B19202CC4C600697B34 /* Petra The Game.app */;
+			productReference = DE6FDD722076246400BB664B /* Petra The Game.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DE8A9B32202CC4C600697B34 /* Petra The GameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE8A9B4A202CC4C600697B34 /* Build configuration list for PBXNativeTarget "Petra The GameTests" */;
-			buildPhases = (
-				DE8A9B2F202CC4C600697B34 /* Sources */,
-				DE8A9B30202CC4C600697B34 /* Frameworks */,
-				DE8A9B31202CC4C600697B34 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE8A9B35202CC4C600697B34 /* PBXTargetDependency */,
-			);
-			name = "Petra The GameTests";
-			productName = "Petra The GameTests";
-			productReference = DE8A9B33202CC4C600697B34 /* Petra The GameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DE8A9B3D202CC4C600697B34 /* Petra The GameUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE8A9B4D202CC4C600697B34 /* Build configuration list for PBXNativeTarget "Petra The GameUITests" */;
-			buildPhases = (
-				DE8A9B3A202CC4C600697B34 /* Sources */,
-				DE8A9B3B202CC4C600697B34 /* Frameworks */,
-				DE8A9B3C202CC4C600697B34 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE8A9B40202CC4C600697B34 /* PBXTargetDependency */,
-			);
-			name = "Petra The GameUITests";
-			productName = "Petra The GameUITests";
-			productReference = DE8A9B3E202CC4C600697B34 /* Petra The GameUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DE8A9B11202CC4C600697B34 /* Project object */ = {
+		DE6FDD6A2076246400BB664B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Thaynara Silva";
 				TargetAttributes = {
-					DE8A9B18202CC4C600697B34 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					DE8A9B32202CC4C600697B34 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = DE8A9B18202CC4C600697B34;
-					};
-					DE8A9B3D202CC4C600697B34 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = DE8A9B18202CC4C600697B34;
+					DE6FDD712076246400BB664B = {
+						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
-			buildConfigurationList = DE8A9B14202CC4C600697B34 /* Build configuration list for PBXProject "Petra The Game" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = DE6FDD6D2076246400BB664B /* Build configuration list for PBXProject "Petra The Game" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DE8A9B10202CC4C600697B34;
-			productRefGroup = DE8A9B1A202CC4C600697B34 /* Products */;
+			mainGroup = DE6FDD692076246400BB664B;
+			productRefGroup = DE6FDD732076246400BB664B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE8A9B18202CC4C600697B34 /* Petra The Game */,
-				DE8A9B32202CC4C600697B34 /* Petra The GameTests */,
-				DE8A9B3D202CC4C600697B34 /* Petra The GameUITests */,
+				DE6FDD712076246400BB664B /* Petra The Game */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DE8A9B17202CC4C600697B34 /* Resources */ = {
+		DE6FDD702076246400BB664B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE71E9002045E53900E3D7D3 /* Player.atlas in Resources */,
-				DE8A9B28202CC4C600697B34 /* Main.storyboard in Resources */,
-				DE8A9B1F202CC4C600697B34 /* GameScene.sks in Resources */,
-				DE8A9B2A202CC4C600697B34 /* Assets.xcassets in Resources */,
-				DE8A9B2D202CC4C600697B34 /* LaunchScreen.storyboard in Resources */,
-				DE8A9B21202CC4C600697B34 /* Actions.sks in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8A9B31202CC4C600697B34 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8A9B3C202CC4C600697B34 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DE6FDD94207624B500BB664B /* Petra_1.png in Resources */,
+				DED8BBE6207677AE0036635B /* Customiser.sks in Resources */,
+				DE6FDD95207624B500BB664B /* Petra_2.png in Resources */,
+				DED8BBE2207674A70036635B /* Information.sks in Resources */,
+				DE6FDD93207624B500BB664B /* Petra_3.png in Resources */,
+				DED8BBF02077E60F0036635B /* Petra_1_yellow.png in Resources */,
+				DE6FDD812076246400BB664B /* Main.storyboard in Resources */,
+				DED8BBEA207678530036635B /* Gameplay.sks in Resources */,
+				DED8BBF22077E74E0036635B /* Petra_1_purple.png in Resources */,
+				DED8BBF92078157B0036635B /* Petra_2_red.png in Resources */,
+				DED8BBFD207818E10036635B /* Petra_3_yellow.png in Resources */,
+				DED8BBFA2078157B0036635B /* Petra_3_red.png in Resources */,
+				DE6FDD832076246500BB664B /* Assets.xcassets in Resources */,
+				DED8BBFE207818E10036635B /* Petra_2_yellow.png in Resources */,
+				DED8BBF42077F35A0036635B /* GameOver.sks in Resources */,
+				DED8BBEE2077E3120036635B /* Petra_1_red.png in Resources */,
+				DE6FDD97207624E900BB664B /* MainMenu.sks in Resources */,
+				DE6FDD862076246500BB664B /* LaunchScreen.storyboard in Resources */,
+				DED8BC0120781BAD0036635B /* Petra_3_purple.png in Resources */,
+				DED8BC0220781BAD0036635B /* Petra_2_purple.png in Resources */,
+				DE6FDD7A2076246400BB664B /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DE8A9B15202CC4C600697B34 /* Sources */ = {
+		DE6FDD6E2076246400BB664B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8A9B23202CC4C600697B34 /* GameScene.swift in Sources */,
-				DE8A9B25202CC4C600697B34 /* GameViewController.swift in Sources */,
-				DE8A9B1D202CC4C600697B34 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8A9B2F202CC4C600697B34 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE8A9B38202CC4C600697B34 /* Petra_The_GameTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8A9B3A202CC4C600697B34 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE8A9B43202CC4C600697B34 /* Petra_The_GameUITests.swift in Sources */,
+				DE6FDD99207624F700BB664B /* MainMenuScene.swift in Sources */,
+				DED8BBE8207677BC0036635B /* CustomiserScene.swift in Sources */,
+				DED8BBF62077F3750036635B /* GameOverScene.swift in Sources */,
+				DED8BBE4207674BA0036635B /* InformationScene.swift in Sources */,
+				DE6FDD7E2076246400BB664B /* GameViewController.swift in Sources */,
+				DED8BBEC207678610036635B /* GameplayScene.swift in Sources */,
+				DE6FDD762076246400BB664B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		DE8A9B35202CC4C600697B34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE8A9B18202CC4C600697B34 /* Petra The Game */;
-			targetProxy = DE8A9B34202CC4C600697B34 /* PBXContainerItemProxy */;
-		};
-		DE8A9B40202CC4C600697B34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE8A9B18202CC4C600697B34 /* Petra The Game */;
-			targetProxy = DE8A9B3F202CC4C600697B34 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		DE8A9B26202CC4C600697B34 /* Main.storyboard */ = {
+		DE6FDD7F2076246400BB664B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DE8A9B27202CC4C600697B34 /* Base */,
+				DE6FDD802076246400BB664B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DE8A9B2B202CC4C600697B34 /* LaunchScreen.storyboard */ = {
+		DE6FDD842076246500BB664B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DE8A9B2C202CC4C600697B34 /* Base */,
+				DE6FDD852076246500BB664B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -331,7 +278,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DE8A9B45202CC4C600697B34 /* Debug */ = {
+		DE6FDD882076246500BB664B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -341,10 +288,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -352,6 +301,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -379,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -388,7 +338,7 @@
 			};
 			name = Debug;
 		};
-		DE8A9B46202CC4C600697B34 /* Release */ = {
+		DE6FDD892076246500BB664B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -398,10 +348,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -409,6 +361,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -430,22 +383,27 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		DE8A9B48202CC4C600697B34 /* Debug */ = {
+		DE6FDD8B2076246500BB664B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GK4GB9Y79G;
 				INFOPLIST_FILE = "Petra The Game/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "thaySilva.Petra-The-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -453,127 +411,47 @@
 			};
 			name = Debug;
 		};
-		DE8A9B49202CC4C600697B34 /* Release */ = {
+		DE6FDD8C2076246500BB664B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GK4GB9Y79G;
 				INFOPLIST_FILE = "Petra The Game/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "thaySilva.Petra-The-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		DE8A9B4B202CC4C600697B34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GK4GB9Y79G;
-				INFOPLIST_FILE = "Petra The GameTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "thaySilva.Petra-The-GameTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Petra The Game.app/Petra The Game";
-			};
-			name = Debug;
-		};
-		DE8A9B4C202CC4C600697B34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GK4GB9Y79G;
-				INFOPLIST_FILE = "Petra The GameTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "thaySilva.Petra-The-GameTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Petra The Game.app/Petra The Game";
-			};
-			name = Release;
-		};
-		DE8A9B4E202CC4C600697B34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GK4GB9Y79G;
-				INFOPLIST_FILE = "Petra The GameUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "thaySilva.Petra-The-GameUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Petra The Game";
-			};
-			name = Debug;
-		};
-		DE8A9B4F202CC4C600697B34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GK4GB9Y79G;
-				INFOPLIST_FILE = "Petra The GameUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "thaySilva.Petra-The-GameUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Petra The Game";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE8A9B14202CC4C600697B34 /* Build configuration list for PBXProject "Petra The Game" */ = {
+		DE6FDD6D2076246400BB664B /* Build configuration list for PBXProject "Petra The Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE8A9B45202CC4C600697B34 /* Debug */,
-				DE8A9B46202CC4C600697B34 /* Release */,
+				DE6FDD882076246500BB664B /* Debug */,
+				DE6FDD892076246500BB664B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE8A9B47202CC4C600697B34 /* Build configuration list for PBXNativeTarget "Petra The Game" */ = {
+		DE6FDD8A2076246500BB664B /* Build configuration list for PBXNativeTarget "Petra The Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE8A9B48202CC4C600697B34 /* Debug */,
-				DE8A9B49202CC4C600697B34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE8A9B4A202CC4C600697B34 /* Build configuration list for PBXNativeTarget "Petra The GameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE8A9B4B202CC4C600697B34 /* Debug */,
-				DE8A9B4C202CC4C600697B34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE8A9B4D202CC4C600697B34 /* Build configuration list for PBXNativeTarget "Petra The GameUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE8A9B4E202CC4C600697B34 /* Debug */,
-				DE8A9B4F202CC4C600697B34 /* Release */,
+				DE6FDD8B2076246500BB664B /* Debug */,
+				DE6FDD8C2076246500BB664B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DE8A9B11202CC4C600697B34 /* Project object */;
+	rootObject = DE6FDD6A2076246400BB664B /* Project object */;
 }
