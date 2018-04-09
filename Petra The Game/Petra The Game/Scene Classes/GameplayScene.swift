@@ -32,7 +32,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     var phoneSprite: SKSpriteNode!
     
     let groundTexture = SKTexture(imageNamed: "ground")
-    let skylineTexture = SKTexture(imageNamed: "skyline")
+    let skylineTexture = SKTexture(imageNamed: "skyline_w_logo")
     let cloudTexture = SKTexture(imageNamed: "clouds")
     var petraTexture: SKTexture!
     let phoneTexture = SKTexture(imageNamed: "phone")
@@ -248,7 +248,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             firstBody.node?.removeFromParent()
             secondBody.node?.removeFromParent()
             GameOverScene.updateScore.score = score
-            ring.duration = 0.0
             endGame()
         }
     }
