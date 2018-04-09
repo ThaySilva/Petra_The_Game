@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DE6FDD762076246400BB664B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FDD752076246400BB664B /* AppDelegate.swift */; };
-		DE6FDD7A2076246400BB664B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD792076246400BB664B /* Actions.sks */; };
 		DE6FDD7E2076246400BB664B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FDD7D2076246400BB664B /* GameViewController.swift */; };
 		DE6FDD812076246400BB664B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD7F2076246400BB664B /* Main.storyboard */; };
 		DE6FDD832076246500BB664B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6FDD822076246500BB664B /* Assets.xcassets */; };
@@ -35,12 +34,12 @@
 		DED8BBFE207818E10036635B /* Petra_2_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBFC207818E10036635B /* Petra_2_yellow.png */; };
 		DED8BC0120781BAD0036635B /* Petra_3_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BBFF20781BAD0036635B /* Petra_3_purple.png */; };
 		DED8BC0220781BAD0036635B /* Petra_2_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DED8BC0020781BAD0036635B /* Petra_2_purple.png */; };
+		DED8BC10207B0C890036635B /* ring.wav in Resources */ = {isa = PBXBuildFile; fileRef = DED8BC0F207B0C890036635B /* ring.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE6FDD722076246400BB664B /* Petra The Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petra The Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6FDD752076246400BB664B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE6FDD792076246400BB664B /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		DE6FDD7D2076246400BB664B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DE6FDD802076246400BB664B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE6FDD822076246500BB664B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		DED8BBFC207818E10036635B /* Petra_2_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_2_yellow.png; sourceTree = "<group>"; };
 		DED8BBFF20781BAD0036635B /* Petra_3_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_3_purple.png; sourceTree = "<group>"; };
 		DED8BC0020781BAD0036635B /* Petra_2_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Petra_2_purple.png; sourceTree = "<group>"; };
+		DED8BC0F207B0C890036635B /* ring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ring.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +100,11 @@
 		DE6FDD742076246400BB664B /* Petra The Game */ = {
 			isa = PBXGroup;
 			children = (
+				DED8BC0E207B0C770036635B /* Sounds */,
 				DE6FDD8F207624A300BB664B /* Player.atlas */,
 				DE6FDD8E2076249900BB664B /* Scene Classes */,
 				DE6FDD8D2076249100BB664B /* Scenes */,
 				DE6FDD752076246400BB664B /* AppDelegate.swift */,
-				DE6FDD792076246400BB664B /* Actions.sks */,
 				DE6FDD7D2076246400BB664B /* GameViewController.swift */,
 				DE6FDD7F2076246400BB664B /* Main.storyboard */,
 				DE6FDD822076246500BB664B /* Assets.xcassets */,
@@ -155,6 +155,14 @@
 				DE6FDD90207624B500BB664B /* Petra_3.png */,
 			);
 			path = Player.atlas;
+			sourceTree = "<group>";
+		};
+		DED8BC0E207B0C770036635B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DED8BC0F207B0C890036635B /* ring.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +239,11 @@
 				DED8BBFE207818E10036635B /* Petra_2_yellow.png in Resources */,
 				DED8BBF42077F35A0036635B /* GameOver.sks in Resources */,
 				DED8BBEE2077E3120036635B /* Petra_1_red.png in Resources */,
+				DED8BC10207B0C890036635B /* ring.wav in Resources */,
 				DE6FDD97207624E900BB664B /* MainMenu.sks in Resources */,
 				DE6FDD862076246500BB664B /* LaunchScreen.storyboard in Resources */,
 				DED8BC0120781BAD0036635B /* Petra_3_purple.png in Resources */,
 				DED8BC0220781BAD0036635B /* Petra_2_purple.png in Resources */,
-				DE6FDD7A2076246400BB664B /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

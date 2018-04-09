@@ -109,16 +109,16 @@ class CustomiserScene: SKScene {
                 }
             } else if atPoint(location).name == "red" {
                 petraSprite.texture = SKTexture(imageNamed: "Petra_1_red")
-                GameplayScene.changePetraShirt.colour = "red"
+                GameplayScene.changePetraShirt.COLOUR = "red"
             } else if atPoint(location).name == "orange" {
                 petraSprite.texture = petraTexture
-                GameplayScene.changePetraShirt.colour = "orange"
+                GameplayScene.changePetraShirt.COLOUR = "orange"
             } else if atPoint(location).name == "yellow" {
                 petraSprite.texture = SKTexture(imageNamed: "Petra_1_yellow")
-                GameplayScene.changePetraShirt.colour = "yellow"
+                GameplayScene.changePetraShirt.COLOUR = "yellow"
             } else if atPoint(location).name == "purple" {
                 petraSprite.texture = SKTexture(imageNamed: "Petra_1_purple")
-                GameplayScene.changePetraShirt.colour = "purple"
+                GameplayScene.changePetraShirt.COLOUR = "purple"
             }
         }
     }

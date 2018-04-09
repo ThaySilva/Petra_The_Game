@@ -8,34 +8,48 @@
 
 import SpriteKit
 
+struct ColliderType {
+    static let PLAYER: UInt32 = 0
+    static let GROUND: UInt32 = 1
+    static let PHONE: UInt32 = 2
+    static let SCORE: UInt32 = 1 << 3
+}
+
 class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     struct changePetraShirt {
-        static var colour: String!
+        static var COLOUR: String!
     }
     
     var movingNode: SKNode!
     var groundNode: SKNode!
+    var phoneNode: SKNode!
     
     var groundSprite: SKSpriteNode!
     var skylineSprite: SKSpriteNode!
     var cloudSprite: SKSpriteNode!
     var petraSprite: SKSpriteNode!
-    
-    let worldCategory: UInt32 = 1 << 1
-    let petraCategory: UInt32 = 1 << 0
+    var phoneSprite: SKSpriteNode!
     
     let groundTexture = SKTexture(imageNamed: "ground")
     let skylineTexture = SKTexture(imageNamed: "skyline")
     let cloudTexture = SKTexture(imageNamed: "clouds")
     var petraTexture: SKTexture!
-    var petraTexture2: SKTexture!
-    var petraTexture3: SKTexture!
+    let phoneTexture = SKTexture(imageNamed: "phone")
     
     var skyColour: SKColor!
-    var petraColour: String!
+    var playerAnimation = [SKTexture]()
+    var animatePlayerAction = SKAction()
+    var movePhonesAndRemove: SKAction!
+    var scoreNode: SKLabelNode!
+    
+    var canRestart = Bool()
+    var maxY = CGFloat(150)
+    var score = Int()
     
     override func didMove(to view: SKView) {
+        
+        canRestart = false
         
         // Setup world physics
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -48,6 +62,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         
         movingNode = SKNode()
         self.addChild(movingNode)
+        phoneNode = SKNode()
+        movingNode.addChild(phoneNode)
         
         // Setup ground
         groundTexture.filteringMode = .nearest
@@ -61,8 +77,12 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             groundSprite = SKSpriteNode(texture: groundTexture)
             groundSprite.size.width = 720
             groundSprite.size.height = 250
-            groundSprite.position = CGPoint(x: i * groundSprite.size.width, y: -(self.frame.height / 2.4))
+            groundSprite.position = CGPoint(x: i * groundSprite.size.width, y: -(self.frame.height / 2.45))
             groundSprite.run(moveGroundForever)
+            groundSprite.physicsBody = SKPhysicsBody(rectangleOf: groundSprite.size)
+            groundSprite.physicsBody?.affectedByGravity = false
+            groundSprite.physicsBody?.categoryBitMask = ColliderType.GROUND
+            groundSprite.physicsBody?.isDynamic = false
             movingNode.addChild(groundSprite)
         }
         
@@ -78,7 +98,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             skylineSprite = SKSpriteNode(texture: skylineTexture)
             skylineSprite.zPosition = -20
             skylineSprite.position = CGPoint(x: i * skylineSprite.size.width,
-                                             y: -(self.frame.size.height / 2.5) + groundTexture.size().height)
+                                             y: -250)
             skylineSprite.run(moveSkylineForever)
             movingNode.addChild(skylineSprite)
         }
@@ -101,36 +121,143 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         // Setup Petra
-        if changePetraShirt.colour == nil || changePetraShirt.colour == "orange" {
-            petraTexture = SKTexture(imageNamed: "Petra_1")
-            petraTexture2 = SKTexture(imageNamed: "Petra_2")
-            petraTexture3 = SKTexture(imageNamed: "Petra_3")
-        } else if changePetraShirt.colour == "red" {
+        if changePetraShirt.COLOUR == "red" {
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1_red"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_2_red"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1_red"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_3_red"))
             petraTexture = SKTexture(imageNamed: "Petra_1_red")
-            petraTexture2 = SKTexture(imageNamed: "Petra_2_red")
-            petraTexture3 = SKTexture(imageNamed: "Petra_3_red")
-        } else if changePetraShirt.colour == "yellow" {
+        } else if changePetraShirt.COLOUR == "orange" {
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_2"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_3"))
+            petraTexture = SKTexture(imageNamed: "Petra_1")
+        } else if changePetraShirt.COLOUR == "yellow" {
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1_yellow"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_2_yellow"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1_yellow"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_3_yellow"))
             petraTexture = SKTexture(imageNamed: "Petra_1_yellow")
-            petraTexture2 = SKTexture(imageNamed: "Petra_2_yellow")
-            petraTexture3 = SKTexture(imageNamed: "Petra_3_yellow")
-        } else if changePetraShirt.colour == "purple" {
+        } else if changePetraShirt.COLOUR == "purple" {
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1_purple"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_2_purple"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1_purple"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_3_purple"))
             petraTexture = SKTexture(imageNamed: "Petra_1_purple")
-            petraTexture2 = SKTexture(imageNamed: "Petra_2_purple")
-            petraTexture3 = SKTexture(imageNamed: "Petra_3_purple")
+        } else {
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_2"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_1"))
+            playerAnimation.append(SKTexture(imageNamed: "Petra_3"))
+            petraTexture = SKTexture(imageNamed: "Petra_1")
         }
-        petraTexture.filteringMode = .nearest
-        petraTexture2.filteringMode = .nearest
-        petraTexture3.filteringMode = .nearest
-        let animate = SKAction.animate(with: [petraTexture, petraTexture2, petraTexture, petraTexture3], timePerFrame: 0.2)
-        let walk = SKAction.repeatForever(animate)
+        
+        animatePlayerAction = SKAction.animate(with: playerAnimation, timePerFrame: 0.2, resize: true, restore: false)
         petraSprite = SKSpriteNode(texture: petraTexture)
+        petraSprite.name = "player"
         petraSprite.setScale(0.6)
-        petraSprite.position = CGPoint(x: -85, y: -(self.frame.size.height / 2.5) + groundTexture.size().height)
-        petraSprite.run(walk)
-        petraSprite.physicsBody?.isDynamic = true
+        petraSprite.position = CGPoint(x: -200, y: -(self.frame.size.height / 2.4) + groundTexture.size().height)
+        petraSprite.zPosition = 5
+        petraSprite.run(SKAction.repeatForever(animatePlayerAction))
+        petraSprite.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: petraSprite.size.width - 40, height: petraSprite.size.height - 30))
+        petraSprite.physicsBody?.affectedByGravity = true
         petraSprite.physicsBody?.allowsRotation = false
-        self.petraSprite.physicsBody = SKPhysicsBody(rectangleOf: self.petraSprite.size)
-        petraSprite.physicsBody?.categoryBitMask = petraCategory
+        petraSprite.physicsBody?.restitution = 0
+        petraSprite.physicsBody?.categoryBitMask = ColliderType.PLAYER
+        petraSprite.physicsBody?.collisionBitMask = ColliderType.GROUND
+        petraSprite.physicsBody?.contactTestBitMask = ColliderType.PHONE
         self.addChild(petraSprite)
+        
+        // Setup phones
+        phoneTexture.filteringMode = .nearest
+        let movePhones = SKAction.moveBy(x: -(self.frame.size.width) * 2.0, y: 0.0, duration: TimeInterval(2.0))
+        let removePhones = SKAction.removeFromParent()
+        movePhonesAndRemove = SKAction.sequence([movePhones, removePhones])
+
+        let spawn = SKAction.run(spawnPhones)
+        let ring = SKAction.playSoundFileNamed("ring.wav", waitForCompletion: false)
+        ring.duration = 2.0
+        let delay = SKAction.wait(forDuration: TimeInterval(3.0))
+        let spawnDelay = SKAction.sequence([spawn, ring, delay])
+        let spawnDelayForever = SKAction.repeatForever(spawnDelay)
+        self.run(spawnDelayForever)
+        
+        // Setup score
+        score = 0
+        scoreNode = SKLabelNode()
+        scoreNode.position = CGPoint(x: 0, y: 30)
+        scoreNode.fontName = "courier"
+        scoreNode.fontSize = 250
+        scoreNode.fontColor = UIColor.orange
+        scoreNode.zPosition = 5
+        scoreNode.text = "0"
+        movingNode.addChild(scoreNode)
+        
+        let wait = SKAction.wait(forDuration: TimeInterval(3.0))
+        let updateScore = SKAction.run {
+            self.score += 1
+            self.scoreNode.text = String(self.score)
+        }
+        let updatingScore = SKAction.sequence([wait, updateScore])
+        let updateScoreForever = SKAction.repeatForever(updatingScore)
+        self.run(updateScoreForever)
+    }
+    
+    func spawnPhones() {
+        
+        phoneSprite = SKSpriteNode(texture: phoneTexture)
+        phoneSprite.name = "phone"
+        phoneSprite.physicsBody = SKPhysicsBody(rectangleOf: phoneSprite.size)
+        phoneSprite.physicsBody?.affectedByGravity = false
+        phoneSprite.physicsBody?.categoryBitMask = ColliderType.PHONE
+        phoneSprite.zPosition = 4
+        phoneSprite.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        phoneSprite.setScale(4.5)
+        phoneSprite.position = CGPoint(x: self.frame.size.width + phoneTexture.size().width * 2, y: -300)
+        phoneSprite.run(movePhonesAndRemove)
+        phoneNode.addChild(phoneSprite)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if movingNode.speed > 0 {
+            for _ in touches {
+                if petraSprite.position.y < maxY {
+                    let jumpUpAction = SKAction.moveBy(x: 0, y: 300, duration: 0.5)
+                    let jumpDownAction = SKAction.moveBy(x: 0, y: -300, duration: 0.4)
+                    let jumpSequence = SKAction.sequence([jumpUpAction, jumpDownAction])
+                    petraSprite.run(jumpSequence)
+                }
+            }
+        }
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        var firstBody = SKPhysicsBody()
+        var secondBody = SKPhysicsBody()
+        
+        if contact.bodyA.node?.name == "player" {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if firstBody.node?.name == "player" && secondBody.node?.name == "phone" {
+            firstBody.node?.removeFromParent()
+            secondBody.node?.removeFromParent()
+            GameOverScene.updateScore.score = score
+            ring.duration = 0.0
+            endGame()
+        }
+    }
+    
+    func endGame() {
+        phoneNode.removeAllChildren()
+        if let scene = GameOverScene(fileNamed: "GameOver") {
+            scene.scaleMode = .aspectFill
+            view!.presentScene(scene)
+        }
     }
 }
