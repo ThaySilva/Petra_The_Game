@@ -32,7 +32,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     var phoneSprite: SKSpriteNode!
     
     let groundTexture = SKTexture(imageNamed: "ground")
-    let skylineTexture = SKTexture(imageNamed: "skyline_w_logo")
+    let skylineTexture = SKTexture(imageNamed: "skyline")
     let cloudTexture = SKTexture(imageNamed: "clouds")
     var petraTexture: SKTexture!
     let phoneTexture = SKTexture(imageNamed: "phone")
@@ -176,10 +176,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         movePhonesAndRemove = SKAction.sequence([movePhones, removePhones])
 
         let spawn = SKAction.run(spawnPhones)
-        let ring = SKAction.playSoundFileNamed("ring.wav", waitForCompletion: false)
-        ring.duration = 2.0
         let delay = SKAction.wait(forDuration: TimeInterval(3.0))
-        let spawnDelay = SKAction.sequence([spawn, ring, delay])
+        let spawnDelay = SKAction.sequence([spawn, delay])
         let spawnDelayForever = SKAction.repeatForever(spawnDelay)
         self.run(spawnDelayForever)
         
@@ -194,7 +192,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         scoreNode.text = "0"
         movingNode.addChild(scoreNode)
         
-        let wait = SKAction.wait(forDuration: TimeInterval(3.0))
+        let wait = SKAction.wait(forDuration: TimeInterval(2.8))
         let updateScore = SKAction.run {
             self.score += 1
             self.scoreNode.text = String(self.score)
@@ -208,7 +206,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         
         phoneSprite = SKSpriteNode(texture: phoneTexture)
         phoneSprite.name = "phone"
-        phoneSprite.physicsBody = SKPhysicsBody(rectangleOf: phoneSprite.size)
+        phoneSprite.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: phoneSprite.size.width - 10, height: phoneSprite.size.height))
         phoneSprite.physicsBody?.affectedByGravity = false
         phoneSprite.physicsBody?.categoryBitMask = ColliderType.PHONE
         phoneSprite.zPosition = 4
@@ -223,8 +221,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         if movingNode.speed > 0 {
             for _ in touches {
                 if petraSprite.position.y < maxY {
-                    let jumpUpAction = SKAction.moveBy(x: 0, y: 300, duration: 0.5)
-                    let jumpDownAction = SKAction.moveBy(x: 0, y: -300, duration: 0.4)
+                    let jumpUpAction = SKAction.moveBy(x: 0, y: 300, duration: 0.4)
+                    let jumpDownAction = SKAction.moveBy(x: 0, y: -300, duration: 0.6)
                     let jumpSequence = SKAction.sequence([jumpUpAction, jumpDownAction])
                     petraSprite.run(jumpSequence)
                 }

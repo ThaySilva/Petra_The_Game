@@ -21,7 +21,7 @@ class GameOverScene: SKScene {
     var menuBtnSprite: SKSpriteNode!
     var startBtnSprite: SKSpriteNode!
     
-    var backgroundTexture = SKTexture(imageNamed: "gameOverBackground_w_logo")
+    var backgroundTexture = SKTexture(imageNamed: "gameOverBackground")
     var menuBtnTexture = SKTexture(imageNamed: "menuBtn")
     var startBtnTexture = SKTexture(imageNamed: "startBtn")
     
